@@ -1,0 +1,25 @@
+body {
+    margin: 0px auto;
+    width: 800px;
+    font-family: Arial, sans-serif;
+    color: #666;
+    padding: 20px;
+}
+h1 {
+    color: #999;
+}
+.paragraph {
+    padding: 5px;
+}
+.img-container {
+	text-align: center;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+footer {
+	text-align: center;
+	font-size: 0.8em;
+}
