@@ -1,6 +1,6 @@
 function initchart() {
     var data = {
-        _proficiency: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        _proficiency: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         children: null,
         value: 0,
         key: "",
@@ -85,16 +85,31 @@ function getcolor(color) {
     return .299 * color.r + .587 * color.g + .114 * color.b
 }
 function k(a) {
-    var c = ["#4CC3D9", "#FFC65D", "#7BC8A4", "#93648D", "#404040"],
+    var one = ["#FFA500", "#a6a6a6"],
+        two = ["#ffee58", "#64b5f6", "#ab47bc", "#ef5350", "#66bb6a" ],
+        three = ["#4cc3d9", "#3a6fe1"],        
         d = [-.1, -.05, 0];
+        
     if (1 == a.depth) {
-        var e = c[coloralternative % 5];
+        var e = one[coloralternative % 2];
         return coloralternative++, e
     }
-    if (a.depth > 1) {
-        var f = d[a.value % 3];
-        return d3.rgb(a.parent._color).brighter(.2 * a.depth + f * a.depth)
+    if (2 == a.depth) {
+        var e = two[coloralternative % 5];
+        return coloralternative++, e
     }
+ 
+    if (4 == a.depth)
+    {
+        //RED for WOW
+        return "#ff004d";
+    }
+    if (a.depth > 1) {     
+        var f = d[a.depth % 3];
+        return d3.rgb(a.parent._color).brighter(.2 * a.depth + f * a.depth);
+    }
+    
+
 }
 var l;
 var chart = function (d3) {
@@ -111,7 +126,7 @@ var chart = function (d3) {
     function c(b, c) {
         j.domain(d3.extent(b, function (a) { return a.date }));
         k
-            .domain([0, 100]), cpath
+            .domain([0, 50]), cpath
             .append("g")
             .attr("class", "x-axis axis")
             .attr("transform", "translate(0," + h + ")")
@@ -120,7 +135,7 @@ var chart = function (d3) {
             .attr("x", 450)
             .attr("y", -8)
             .style("text-anchor", "end")
-            .text("Time"), cpath
+            .text("Satisfaction Scale (1-10)"), cpath
             .append("g")
             .attr("class", "y-axis axis")
             .call(lefttick)
@@ -129,7 +144,7 @@ var chart = function (d3) {
             .attr("y", 6)
             .attr("dy", ".91em")
             .style("text-anchor", "end")
-            .text("Proficiency"), cpath
+            .text("Population in %"), cpath
             .append("path")
             .datum(b)
             .attr("class", "line")
@@ -156,14 +171,14 @@ var chart = function (d3) {
         },
         g = 500 - rect.left - rect.right,
         h = 400 - rect.top - rect.bottom,
-        i = [1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013],
+        i = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         j = d3.scale.linear().range([0, g]),
         k = d3.scale.linear().range([h, 0]),
         bottomtick = d3
             .svg
             .axis()
             .scale(j)
-            .tickValues([1999, 2004, 2009, 2013])
+            .tickValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
             .tickFormat(d3.format(".0f"))
             .tickPadding(10)
             .tickSize(0)
@@ -174,7 +189,7 @@ var chart = function (d3) {
             .scale(k)
             .tickSize(0)
             .tickPadding(10)
-            .tickValues([20, 40, 60, 80, 100])
+            .tickValues([10, 20, 30, 40, 50])
             .orient("left"),
         n = d3.svg.line().interpolate("basis").x(function (a) {
             return j(a.date)
