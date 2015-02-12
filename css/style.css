@@ -2,11 +2,14 @@ body {
     margin: 0px auto;
     width: 800px;
     font-family: Arial, sans-serif;
-    color: #666;
+    color: #666;    
     padding: 20px;
 }
 h1 {
-    color: #999;
+    color: white;
+}
+h2 {
+    color: white;
 }
 .paragraph {
     padding: 5px;

@@ -2,14 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Example page</title>
+	<title>WVS Project</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/d3/d3.min.js" charset="utf-8"></script>
+	<script src="js/d3/d3.min.js" charset="utf-8"></script>	
+    <link rel="stylesheet" type="text/css" href="css/skill.css"/>
 </head>
 <body>
-	<h1>This is the title of the page</h1>
-	<footer>
-		<p></p>
-	</footer>
-</body>
-</html>
+	<h2>World Value Survey - Project 2</h2>
+	<div id="skills">
+		<div id="skillmap">
+			<div class="skills-wrapper">
+				<h1>How Satisfied are you in your life ?</h1>
+				<div class="skills-sunburst"></div>
+				<div class="skills-chart">
+					<div id="skills-chart-breadcrumb"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/skillsdata.js"></script>
+	<script type="text/javascript" src="js/skill.js"></script>
+	<script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "700px");
+      </script> 
+
+
+      <footer>
+      	<p></p>
+      </footer>
+  </body>
+  </html>
