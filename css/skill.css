@@ -1,8 +1,8 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  background-color: #406573;
+  background-color: #2a363a;
   width: 1200px;
   height: 700px;
   margin-top: 10px;
@@ -17,15 +17,18 @@ body {
   margin-left: -80px;
 }
 #skillmap .skills-sunburst svg {
-  font: 11px 'Source Sans Pro', sans-serif;
+  font: 12px 'Source Sans Pro', sans-serif;
   font-weight: 900;
+  fill: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   cursor: pointer;
   margin-left: 100px;
 }
 #skillmap .skills-chart {
   float: right;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
+  fill: white;
   margin: 80px 20px 0 0;
 }
 #skillmap .skills-chart .breadcumb-text {
@@ -42,7 +45,7 @@ body {
 }
 #skillmap .skills-chart .x-axis path,
 #skillmap .skills-chart .y-axis path {
-  stroke: #444;
-  stroke-width: 1px;
+  stroke: #92756a;
+  stroke-width: 2px;
   shape-rendering: geometricPrecision;
 }

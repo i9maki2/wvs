@@ -6,10 +6,11 @@ body {
     padding: 20px;
 }
 h1 {
-    color: white;
+    color: #92756a;
 }
 h2 {
     color: white;
+    font-size: 30px;
 }
 .paragraph {
     padding: 5px;
@@ -25,4 +26,7 @@ img {
 footer {
 	text-align: center;
 	font-size: 0.8em;
+}
+p {    
+   color: #92756a;
 }

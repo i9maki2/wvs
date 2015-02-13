@@ -5,32 +5,63 @@
 	<title>WVS Project</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/d3/d3.min.js" charset="utf-8"></script>	
-    <link rel="stylesheet" type="text/css" href="css/skill.css"/>
+	<link rel="stylesheet" type="text/css" href="css/skill.css"/>
+
+	
 </head>
-<body>
-	<h2>World Value Survey - Project 2</h2>
-	<div id="skills">
-		<div id="skillmap">
-			<div class="skills-wrapper">
-				<h1>How Satisfied are you in your life ?</h1>
-				<div class="skills-sunburst"></div>
-				<div class="skills-chart">
-					<div id="skills-chart-breadcrumb"></div>
+<body style="background-color: #2a363a">
+	<div class="container">
+		<h1>World Value Survey - Project 2</h1>
+		<div id="skills">
+			<div id="skillmap">
+				<div class="skills-wrapper">
+					<h2 style="text-align: center;">Considering employment status, how satisfied are you in your life ?</h2>
+					<h3 style="text-align: center;"><span style="color: #66bb6a">Sweden</span> - <span style="color:#ffee58">Spain</span> - <span style="color: #64b5f6">Serbia</span> - <span style="color: #ab47bc">Ukraine</span></h3>
+					<div class="skills-sunburst"></div>
+					<div class="skills-chart">
+						<div id="skills-chart-breadcrumb"></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/skillsdata.js"></script>
-	<script type="text/javascript" src="js/skill.js"></script>
-	<script type="text/javascript">
+		<br/>
+		<br/>
+		<div align="right">
+			
+			<h2>European Union vs. East European Countries</h2>
+			<p class="text-danger" style="width: 700px; align: left">The above vizualization represents difference between 4 countries in europe (divided in two categories - European Union and Eastern Eaurope) depending how satisfied citizens are according to their employment status. Tiles that take larger space of the graph have better results. </p>
+			
+			<p style="width: 700px;"> The graph on the right represents citizen's satisfaction (X axis) on the scale from 1 indicating as most dissatisfied citizens to 10 - most satisfied ones and population in percentage (Y axis).</p>
+
+			<p style="width: 700px;"> The <span style="color: #ff004d;">red tiles</span> that are hanging outside of the left graph are showing the highest value for the specific country. For informative purposes those values are highlihted in order to spot them easier.</p>
+
+			<h2>How To Use the above Map ?</h2>
+			<p style="width: 700px;">Hover with your mouse cursor over one of the colorfoul tiles. Each color represents different category (inner tiles) and country (outer tiles). Once you hover over a tile, the graph on the left will change according to the selection. </p>
+
+			<h2>Conclusion</h2>
+
+			<p style="width: 700px;"> From this visualization it can be concluded that <span style="color: #66bb6a">Sweden</span> has population that is the most satisfied among other specified countries. As well, it cen be observed that <span style="color: #64b5f6">Serbia</span> is the country with the least population that are satisfied.</p>
+			
+			<h2>World Value Survey Database</h2>
+			<p style="width: 700px;">Data gathered from World Value Survey Website. <a href="http://www.worldvaluessurvey.org" style="text-decoration: none; color: white">www.worldvaluessurvey.org</a></p>
+			
+		</div>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/skillsdata.js"></script>
+		<script type="text/javascript" src="js/skill.js"></script>
+		<script type="text/javascript">
       // Hack to make this example display correctly in an iframe on bl.ocks.org
       d3.select(self.frameElement).style("height", "700px");
       </script> 
-
-
-      <footer>
-      	<p></p>
-      </footer>
-  </body>
-  </html>
+  </div>
+  <br/>
+  <br/>
+  <hr>
+  <br/>
+  <br/>
+  <footer>
+  	<h3 style="color: white">DH2321 - Information Visualization Project 2</h3>
+  	<h3 style="color: white">KTH Royal Institute of Technology</h3>
+  </footer>
+</body>
+</html>
